@@ -1,13 +1,13 @@
-package de.codecraft.scaladroid
+package scaladroid
 
 import android.app.Activity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import de.codecraft.scaladroid.R
 
 
 class MyActivity extends Activity {
-
 
     override def onCreate(savedInstanceState : Bundle ) = {
         super.onCreate(savedInstanceState)
@@ -15,25 +15,19 @@ class MyActivity extends Activity {
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    override def onCreateOptionsMenu(menu : Menu ) = {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.my, menu);
-        return true;
+        getMenuInflater.inflate(R.menu.my, menu)
+        true
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    override def onOptionsItemSelected(item : MenuItem ) = {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        val id = item.getItemId
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+        if (id == R.id.action_settings) true else
+          super.onOptionsItemSelected(item)
     }
 }
