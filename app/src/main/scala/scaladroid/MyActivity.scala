@@ -2,6 +2,7 @@ package scaladroid
 
 import android.app.Activity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import de.codecraft.scaladroid.R
@@ -11,6 +12,7 @@ class MyActivity extends Activity {
 
     override def onCreate(savedInstanceState : Bundle ) = {
         super.onCreate(savedInstanceState)
+        Log.d("test", "test")
         setContentView(R.layout.activity_my)
     }
 

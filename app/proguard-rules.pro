@@ -15,10 +15,3 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
-
--dontoptimize
--dontobfuscate
--dontpreverify
--dontwarn scala.**
--keep class !scala*.** { *; }
--ignorewarnings
